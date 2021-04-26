@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/sky.jpg" type="Texture" id=1]
+[ext_resource path="res://src/Rocket.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/game.gd" type="Script" id=4]
+
+[node name="game" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -281.406
+margin_top = -231.734
+margin_right = 1638.59
+margin_bottom = 1044.27
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rocket" parent="." instance=ExtResource( 2 )]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 400.0
+margin_top = 20.0
+margin_right = 640.0
+margin_bottom = 89.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Use arrow keys to land rocket
+Press <r> to restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
